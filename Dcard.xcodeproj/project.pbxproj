@@ -3,27 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DDA2137123E90EF40008264A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2137023E90EF40008264A /* AppDelegate.swift */; };
 		DDA2137323E90EF40008264A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2137223E90EF40008264A /* SceneDelegate.swift */; };
-		DDA2137523E90EF40008264A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2137423E90EF40008264A /* ViewController.swift */; };
 		DDA2137823E90EF40008264A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA2137623E90EF40008264A /* Main.storyboard */; };
 		DDA2137A23E90EF80008264A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA2137923E90EF80008264A /* Assets.xcassets */; };
 		DDA2137D23E90EF80008264A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA2137B23E90EF80008264A /* LaunchScreen.storyboard */; };
+		DDA2138523E90FD70008264A /* DcardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2138423E90FD70008264A /* DcardTableViewController.swift */; };
+		DDA2138723E90FF20008264A /* DetailTableViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA2138623E90FF20008264A /* DetailTableViewConroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDA2136D23E90EF40008264A /* Dcard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dcard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA2137023E90EF40008264A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA2137223E90EF40008264A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDA2137423E90EF40008264A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDA2137723E90EF40008264A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDA2137923E90EF80008264A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA2137C23E90EF80008264A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA2137E23E90EF80008264A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA2138423E90FD70008264A /* DcardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DcardTableViewController.swift; sourceTree = "<group>"; };
+		DDA2138623E90FF20008264A /* DetailTableViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewConroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				DDA2137023E90EF40008264A /* AppDelegate.swift */,
 				DDA2137223E90EF40008264A /* SceneDelegate.swift */,
-				DDA2137423E90EF40008264A /* ViewController.swift */,
+				DDA2138423E90FD70008264A /* DcardTableViewController.swift */,
+				DDA2138623E90FF20008264A /* DetailTableViewConroller.swift */,
 				DDA2137623E90EF40008264A /* Main.storyboard */,
 				DDA2137923E90EF80008264A /* Assets.xcassets */,
 				DDA2137B23E90EF80008264A /* LaunchScreen.storyboard */,
@@ -103,7 +106,7 @@
 				};
 			};
 			buildConfigurationList = DDA2136823E90EF40008264A /* Build configuration list for PBXProject "Dcard" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA2137523E90EF40008264A /* ViewController.swift in Sources */,
+				DDA2138723E90FF20008264A /* DetailTableViewConroller.swift in Sources */,
 				DDA2137123E90EF40008264A /* AppDelegate.swift in Sources */,
+				DDA2138523E90FD70008264A /* DcardTableViewController.swift in Sources */,
 				DDA2137323E90EF40008264A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
