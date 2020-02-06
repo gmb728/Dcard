@@ -17,7 +17,7 @@ class DcardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let urlStr = "https://www.dcard.tw/_api/posts".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlStr = "http://www.dcard.tw/_api/posts".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: urlStr!)
         
         let task = URLSession.shared.dataTask(with: url!) { (data, respose, error) in
@@ -47,7 +47,12 @@ class DcardTableViewController: UITableViewController {
          task.resume()
  }
    
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let detailController = segue.destination as? DetailTableViewController
