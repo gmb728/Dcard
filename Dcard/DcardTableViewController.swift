@@ -10,10 +10,9 @@ import UIKit
 
 class DcardTableViewController: UITableViewController {
     var id: [String] = []
-    var title: [String] = []
     var excerpt: [String] = []
     var createAt: [String] = []
-    var likeCount: [String] = []
+    var likeCount: [Int] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +28,7 @@ class DcardTableViewController: UITableViewController {
                     for dcard in dic {
                         self.id.append(dcard["id"] as! String)
                     }
-                    for dcard in dic {
-                        self.title.append(dcard["title"] as! String)
-                    }
+                    
                     for dcard in dic {
                         self.excerpt.append(dcard["excerpt"] as! String)
                     }
@@ -39,44 +36,43 @@ class DcardTableViewController: UITableViewController {
                         self.createAt.append(dcard["createAt"] as! String)
                     }
                     for dcard in dic {
-                      self.likeCount.append(dcard["likeCount"] as! String)
+                    self.likeCount.append(dcard["likeCount"] as! Int)
                         }
                     }
-                    print(self.id)
+                   
                     self.tableView.reloadData()
             
         }
     }
+         task.resume()
  }
-    task.resume()
-}
-
+   
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let detailController = segue.destination as? DetailTableViewController
         if let row = tableView.indexPathForSelectedRow? .row {
-            let dcard: [Any] = [id[row], title[row], excerpt[row], createAt[row], likeCount[row]]
+            let dcard: [Any] = [id[row], excerpt[row], createAt[row], likeCount[row]]
             
             detailController?.dcard = dcard
         }
 }
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let id = self.id[indexPath.row]
-        let title = self.title[indexPath.row]
+        let excerpt = self.excerpt[indexPath.row]
         cell.textLabel?.text = id
-        cell.detailTextLabel?.text = title
+        cell.detailTextLabel?.text = excerpt
     }
 
-    override func tableView(_tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DcardCell", for: indexPath)
-        
-        configure(cell: cell, forItemAt: indexPath)
-        return cell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DcardCell", for: indexPath)
+            
+            configure(cell: cell, forItemAt: indexPath)
+            return cell
+        }
+
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)-> Int {
+            return id.count
     }
-
-    override func tableView(_tableView: UITableView, numberOfRowsInSection section: Int)-> Int {
-        return id.count
-}
-
+    }

@@ -43,7 +43,7 @@ class DetailTableViewController: UITableViewController {
     }
     
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
-        let title = ["id", "title", "excerpt", "createAt", "likeCount"]
+        let title = ["id", "excerpt", "createAt", "likeCount"]
         
         let detail = dcard[indexPath.row]
         cell.textLabel?.text = title[indexPath.row]
